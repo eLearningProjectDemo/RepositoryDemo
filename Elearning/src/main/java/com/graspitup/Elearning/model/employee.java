@@ -9,13 +9,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Data;
 
-@XmlRootElement
+
 @Entity
 @Data
 public class employee {
 	@Id
-	private int emp_id;
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int emp_id;
+	
 	@Column(name = "username")
 	private String username;
 	@Column(name = "password")
