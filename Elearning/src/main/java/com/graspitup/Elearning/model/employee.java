@@ -1,5 +1,4 @@
 package com.graspitup.Elearning.model;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,12 +14,16 @@ public class employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int emp_id;
+	@Column(name = "first_name") 
+	private String first_name;
+	@Column(name = "last_name") private String last_name;
     @Column(name = "username")
 	private String username;
 	@Column(name = "password")
 	private String password;
 	@Column(name = "email")
 	private String email;
+	
 
 	/*
 	 * @Column(name = "first_name") private String first_name;

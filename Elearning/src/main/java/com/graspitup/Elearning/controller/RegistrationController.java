@@ -31,6 +31,7 @@ public class RegistrationController {
 	}
 
 	@PostMapping("/register")
+	@CrossOrigin(origins= "http://localhost:4200")
 	public employee registerEmployee(@RequestBody final employee employee1) throws Exception {
 		String tempEmail = employee1.getEmail();
 		employee emp;
@@ -47,7 +48,7 @@ public class RegistrationController {
 	}
 
 	@PostMapping("/login")
-	@CrossOrigin("http://localhost:4200")
+	@CrossOrigin(origins= "http://localhost:4200")
 	public employee login(@RequestBody final employee employee1) throws Exception {
 		String tempEmailId = employee1.getEmail();
 		String tempPassword = employee1.getPassword();
